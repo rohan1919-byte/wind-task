@@ -1,0 +1,8 @@
+node_modules/
+dist/
+__pycache__/
+.pytest_cache/
+.venv/
+.vercel/
+# remove the next line if you want to commit the downloaded Elexon data (needed for Vercel)
+# backend/data/*.json.gz

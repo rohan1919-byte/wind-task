@@ -1,0 +1,12 @@
+services:
+  winddesk:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      # DECISION_CUTOFF_HOUR: "9"
+      # DECISION_CUTOFF_MINUTE: "0"
+      # FORCE_DEMO: "1"   # use generated data, no internet needed
+      PORT: "8000"
+    volumes:
+      - ./backend/data:/app/data   # keeps the downloaded Elexon cache between runs
