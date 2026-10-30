@@ -30,6 +30,3 @@ backend/tests/     unit tests
 frontend/src/      React app (Decision view, Accuracy view)
 Dockerfile, docker-compose.yml, vercel.json, api/index.py
 ```
-
-## Limitations
-No demand data (out of scope); wind only, national level.
