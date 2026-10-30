@@ -1,8 +1,10 @@
 {
-  "buildCommand": "cd frontend && npm install && npm run build",
-  "outputDirectory": "frontend/dist",
-  "functions": {
-    "api/index.py": { "includeFiles": "backend/**" }
+  "services": {
+    "frontend": { "root": "frontend/" },
+    "backend": { "root": "backend/", "entrypoint": "app.main:app" }
   },
-  "rewrites": [{ "source": "/api/(.*)", "destination": "/api/index" }]
+  "rewrites": [
+    { "source": "/api/(.*)", "destination": { "service": "backend" } },
+    { "source": "/(.*)", "destination": { "service": "frontend" } }
+  ]
 }
